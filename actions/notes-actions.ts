@@ -5,13 +5,13 @@ import { InsertNote } from "@/db/schema/notes-schema";
 import { ActionState } from "@/types";
 import { revalidatePath } from "next/cache";
 
-export async function createNoteAction(data: InsertNote): Promise<ActionState> {
+export async function createNoteAction({ userId, title, content }: { userId: string; title: string; content: string }) {
   try {
-    const newNote = await createNote(data);
+    const newNote = await createNote({ userId, title, content });
     revalidatePath("/notes");
     return { status: "success", message: "Note created successfully", data: newNote };
   } catch (error) {
-    return { status: "error", message: "Error creating note" };
+    return { status: "error", message: "Failed to create note" };
   }
 }
 
