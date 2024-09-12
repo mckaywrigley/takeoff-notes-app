@@ -15,6 +15,13 @@
       "when": 1726117012617,
       "tag": "0001_gigantic_swarm",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1726123824712,
+      "tag": "0002_white_hellcat",
+      "breakpoints": true
     }
   ]
 }
