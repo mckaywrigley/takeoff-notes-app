@@ -1,37 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Takeoff Notes App
 
-## Getting Started
+Source code for the Notes App from Section 3 of this [Takeoff](https://www.jointakeoff.com/courses/apps-with-ai) course.
 
-First, run the development server:
+Join today to get access to the full course.
+
+## Sponsors
+
+If you are interested in sponsoring my repos, please contact me at [ads@takeoffai.org](mailto:ads@takeoffai.org).
+
+Or sponsor me directly on [GitHub Sponsors](https://github.com/sponsors/mckaywrigley).
+
+## Tech Stack
+
+- IDE: [Cursor](https://www.cursor.com/)
+- AI Tools: [V0](https://v0.dev/), [Perplexity](https://www.perplexity.com/)
+- Frontend: [Next.js](https://nextjs.org/docs), [Tailwind](https://tailwindcss.com/docs/guides/nextjs), [Shadcn](https://ui.shadcn.com/docs/installation), [Framer Motion](https://www.framer.com/motion/introduction/)
+- Backend: [PostgreSQL](https://www.postgresql.org/about/), [Supabase](https://supabase.com/), [Drizzle](https://orm.drizzle.team/docs/get-started-postgresql), [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
+- Auth: [Clerk](https://clerk.com/)
+- Payments: [Stripe](https://stripe.com/)
+
+## Prerequisites
+
+You will need accounts for the following services.
+
+They all have free plans that you can use to get started.
+
+- Create a [Cursor](https://www.cursor.com/) account
+- Create a [GitHub](https://github.com/) account
+- Create a [Supabase](https://supabase.com/) account
+- Create a [Clerk](https://clerk.com/) account
+- Create a [Stripe](https://stripe.com/) account
+- Create a [Vercel](https://vercel.com/) account
+
+You will likely not need paid plans unless you are building a business.
+
+## Environment Variables
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# DB (Supabase)
+DATABASE_URL=
+
+# Auth (Clerk)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/login
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
+
+# Payments (Stripe)
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PAYMENT_LINK_YEARLY=
+NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# takeoff-ai-notes-app
+1. Clone the repository
+2. Copy `.env.example` to `.env.local` and fill in the environment variables from above
+3. Run `npm install` to install dependencies
+4. Run `npm run dev` to run the app locally
